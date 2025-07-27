@@ -38,12 +38,19 @@ public class Details {
 	
 	public void getDetails()
 	{
-		System.out.println("Your Aadhar number is: ");
 		
-		for(int x=0;x<3;x++)
+		if(Pan == null && VoterID ==null && Passport == null)
 		{
-			double num = Math.random()*10000;
-			System.out.printf("%04d ",(int)num);
+			System.out.println("Please enter valid details");
+		}
+		else 
+		{
+			System.out.println("Your AADHAR number is: ");
+			for(int x=0;x<3;x++)
+			{
+				double num = Math.random()*10000;
+				System.out.printf("%04d ",(int)num);
+			}
 		}
 		System.out.println("\n");
 	}
